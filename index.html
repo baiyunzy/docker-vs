@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Green Network - Protect Earth</title>
+    <title>SmileCare - Protect Your Dental Health</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         * {
@@ -14,13 +14,14 @@
         }
 
         :root {
-            --primary: #2e7d32;
-            --secondary: #4caf50;
-            --accent: #8bc34a;
-            --light: #e8f5e9;
-            --dark: #1b5e20;
+            --primary: #1976D2;
+            --secondary: #2196F3;
+            --accent: #42A5F5;
+            --light: #E3F2FD;
+            --dark: #0D47A1;
             --text: #333333;
             --white: #ffffff;
+            --teal: #009688;
         }
 
         body {
@@ -82,7 +83,7 @@
         }
 
         nav ul li a:hover {
-            color: var(--accent);
+            color: #B3E5FC;
         }
 
         nav ul li a::after {
@@ -92,7 +93,7 @@
             left: 0;
             width: 0;
             height: 2px;
-            background-color: var(--accent);
+            background-color: #B3E5FC;
             transition: width 0.3s ease;
         }
 
@@ -101,7 +102,7 @@
         }
 
         .hero {
-            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)), url('https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2073&q=80');
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)), url('https://images.unsplash.com/photo-1587628195477-c347819fd888?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');
             background-size: cover;
             background-position: center;
             height: 80vh;
@@ -145,6 +146,15 @@
             background-color: var(--primary);
             transform: translateY(-3px);
             box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+        }
+
+        .btn-secondary {
+            background-color: var(--teal);
+            margin-left: 1rem;
+        }
+
+        .btn-secondary:hover {
+            background-color: #00796B;
         }
 
         section {
@@ -252,17 +262,17 @@
             color: var(--text);
         }
 
-        .initiatives {
+        .services {
             background-color: var(--white);
         }
 
-        .initiatives-grid {
+        .services-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 2rem;
         }
 
-        .initiative-card {
+        .service-card {
             background-color: var(--light);
             border-radius: 10px;
             overflow: hidden;
@@ -270,38 +280,79 @@
             transition: transform 0.3s ease;
         }
 
-        .initiative-card:hover {
+        .service-card:hover {
             transform: translateY(-10px);
         }
 
-        .initiative-img {
+        .service-img {
             height: 200px;
             overflow: hidden;
         }
 
-        .initiative-img img {
+        .service-img img {
             width: 100%;
             height: 100%;
             object-fit: cover;
             transition: transform 0.5s ease;
         }
 
-        .initiative-card:hover .initiative-img img {
+        .service-card:hover .service-img img {
             transform: scale(1.1);
         }
 
-        .initiative-content {
+        .service-content {
             padding: 1.5rem;
         }
 
-        .initiative-content h3 {
+        .service-content h3 {
             font-size: 1.5rem;
             margin-bottom: 1rem;
             color: var(--dark);
         }
 
-        .initiative-content p {
+        .service-content p {
             margin-bottom: 1.5rem;
+        }
+
+        .tips {
+            background-color: #F5F5F5;
+        }
+
+        .tips-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+        }
+
+        .tip-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1.5rem;
+            background-color: var(--white);
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .tip-icon {
+            background-color: var(--light);
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .tip-icon i {
+            font-size: 1.8rem;
+            color: var(--primary);
+        }
+
+        .tip-content h3 {
+            margin-bottom: 1rem;
+            color: var(--dark);
         }
 
         .cta {
@@ -330,8 +381,8 @@
         }
 
         .cta .btn:hover {
-            background-color: var(--accent);
-            color: var(--white);
+            background-color: #B3E5FC;
+            color: var(--dark);
         }
 
         footer {
@@ -377,7 +428,7 @@
         }
 
         .footer-links li a {
-            color: var(--light);
+            color: #BBDEFB;
             text-decoration: none;
             transition: all 0.3s ease;
         }
@@ -427,7 +478,7 @@
                 grid-template-columns: 1fr;
             }
             
-            .initiatives-grid {
+            .services-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
             
@@ -475,7 +526,11 @@
                 display: block;
             }
             
-            .initiatives-grid {
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .tips-grid {
                 grid-template-columns: 1fr;
             }
             
@@ -485,6 +540,12 @@
             
             .stats {
                 grid-template-columns: 1fr;
+            }
+            
+            .btn-secondary {
+                margin-left: 0;
+                margin-top: 1rem;
+                display: inline-block;
             }
         }
 
@@ -499,8 +560,8 @@
     <header>
         <div class="container nav-container">
             <div class="logo">
-                <i class="fas fa-seedling"></i>
-                <span>Green Network</span>
+                <i class="fas fa-tooth"></i>
+                <span>SmileCare</span>
             </div>
             <nav>
                 <div class="mobile-menu">
@@ -509,8 +570,8 @@
                 <ul>
                     <li><a href="#home">Home</a></li>
                     <li><a href="#about">About</a></li>
-                    <li><a href="#initiatives">Initiatives</a></li>
-                    <li><a href="#get-involved">Get Involved</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#tips">Dental Tips</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
@@ -520,9 +581,10 @@
     <!-- Hero Section -->
     <section class="hero" id="home">
         <div class="container hero-content">
-            <h1>Protect Our Planet, Preserve Our Future</h1>
-            <p>Join the global movement to create a sustainable world through conservation, education, and community action.</p>
-            <a href="#get-involved" class="btn">Join Our Network</a>
+            <h1>Healthy Teeth, Beautiful Smile</h1>
+            <p>Professional dental care for your family's oral health and confident smile.</p>
+            <a href="#services" class="btn">Our Services</a>
+            <a href="#contact" class="btn btn-secondary">Book Appointment</a>
         </div>
     </section>
 
@@ -530,82 +592,130 @@
     <section id="about">
         <div class="container">
             <div class="section-title">
-                <h2>About Green Network</h2>
-                <p>We are a global community dedicated to environmental protection and sustainable development.</p>
+                <h2>About SmileCare</h2>
+                <p>Providing exceptional dental care with state-of-the-art technology and compassionate service.</p>
             </div>
             <div class="about-content">
                 <div class="about-img">
-                    <img src="https://images.unsplash.com/photo-1507591064344-4c6ce005b128?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Team planting trees">
+                    <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Dental clinic">
                 </div>
                 <div class="about-text">
                     <h3>Our Mission</h3>
-                    <p>Green Network is committed to creating a sustainable future by protecting natural ecosystems, promoting renewable energy, and empowering communities to take environmental action.</p>
-                    <p>Founded in 2010, we've grown from a small grassroots organization to an international network with over 50,000 members across 120 countries.</p>
-                    <p>Our approach combines scientific research, community engagement, and policy advocacy to address the most pressing environmental challenges of our time.</p>
-                    <a href="#" class="btn">Learn More</a>
+                    <p>SmileCare is dedicated to providing comprehensive, personalized dental care in a comfortable environment. We believe everyone deserves a healthy, beautiful smile that lasts a lifetime.</p>
+                    <p>Founded in 2005, our clinic has grown to become a trusted name in dental care with a team of 15 experienced dentists and specialists committed to excellence.</p>
+                    <p>We combine advanced dental technology with patient-centered care to deliver the highest quality treatments while ensuring your comfort and satisfaction.</p>
+                    <a href="#" class="btn">Meet Our Team</a>
                 </div>
             </div>
             <div class="stats">
                 <div class="stat-item">
-                    <i class="fas fa-tree"></i>
-                    <h3 class="counter" data-target="2500000">0</h3>
-                    <p>Trees Planted</p>
-                </div>
-                <div class="stat-item">
                     <i class="fas fa-users"></i>
-                    <h3 class="counter" data-target="50000">0</h3>
-                    <p>Active Members</p>
+                    <h3 class="counter" data-target="25000">0</h3>
+                    <p>Happy Patients</p>
                 </div>
                 <div class="stat-item">
-                    <i class="fas fa-globe-americas"></i>
-                    <h3 class="counter" data-target="120">0</h3>
-                    <p>Countries Reached</p>
+                    <i class="fas fa-award"></i>
+                    <h3 class="counter" data-target="15">0</h3>
+                    <p>Years of Excellence</p>
                 </div>
                 <div class="stat-item">
-                    <i class="fas fa-recycle"></i>
-                    <h3 class="counter" data-target="1500">0</h3>
-                    <p>Cleanup Projects</p>
+                    <i class="fas fa-stethoscope"></i>
+                    <h3 class="counter" data-target="15">0</h3>
+                    <p>Dental Specialists</p>
+                </div>
+                <div class="stat-item">
+                    <i class="fas fa-hospital"></i>
+                    <h3 class="counter" data-target="5">0</h3>
+                    <p>Modern Clinics</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Initiatives Section -->
-    <section class="initiatives" id="initiatives">
+    <!-- Services Section -->
+    <section class="services" id="services">
         <div class="container">
             <div class="section-title">
-                <h2>Our Initiatives</h2>
-                <p>Discover the key programs and projects we're implementing to protect our planet.</p>
+                <h2>Our Dental Services</h2>
+                <p>Comprehensive dental care tailored to your unique needs and goals.</p>
             </div>
-            <div class="initiatives-grid">
-                <div class="initiative-card">
-                    <div class="initiative-img">
-                        <img src="https://dialogue.earth/content/uploads/2021/04/lessons-from-the-rush-to-reforest-china-dialogue-2400x1599.jpg" alt="Reforestation">
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="https://images.unsplash.com/photo-1628899976952-664198373655?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Preventive Care">
                     </div>
-                    <div class="initiative-content">
-                        <h3>Global Reforestation</h3>
-                        <p>Planting millions of trees worldwide to restore ecosystems, combat climate change, and protect biodiversity.</p>
+                    <div class="service-content">
+                        <h3>Preventive Care</h3>
+                        <p>Regular checkups, cleanings, fluoride treatments, and oral cancer screenings to maintain optimal dental health.</p>
                         <a href="#" class="btn">Learn More</a>
                     </div>
                 </div>
-                <div class="initiative-card">
-                    <div class="initiative-img">
-                        <img src="https://images.unsplash.com/photo-1621451537084-482c73073a0f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80" alt="Ocean Conservation">
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="https://images.unsplash.com/photo-1581993898921-74977a586f89?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Cosmetic Dentistry">
                     </div>
-                    <div class="initiative-content">
-                        <h3>Ocean Conservation</h3>
-                        <p>Protecting marine ecosystems, reducing plastic pollution, and promoting sustainable fishing practices.</p>
+                    <div class="service-content">
+                        <h3>Cosmetic Dentistry</h3>
+                        <p>Teeth whitening, veneers, bonding, and smile makeovers to enhance the appearance of your smile.</p>
                         <a href="#" class="btn">Learn More</a>
                     </div>
                 </div>
-                <div class="initiative-card">
-                    <div class="initiative-img">
-                        <img src="https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2072&q=80" alt="Renewable Energy">
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="https://images.unsplash.com/photo-1584464961585-4afc2757e478?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Restorative Dentistry">
                     </div>
-                    <div class="initiative-content">
-                        <h3>Renewable Energy</h3>
-                        <p>Promoting solar, wind, and other clean energy sources to reduce dependence on fossil fuels.</p>
+                    <div class="service-content">
+                        <h3>Restorative Dentistry</h3>
+                        <p>Dental implants, crowns, bridges, and dentures to restore function and appearance of damaged teeth.</p>
                         <a href="#" class="btn">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dental Tips Section -->
+    <section class="tips" id="tips">
+        <div class="container">
+            <div class="section-title">
+                <h2>Essential Dental Care Tips</h2>
+                <p>Simple yet effective practices to maintain optimal oral health every day.</p>
+            </div>
+            <div class="tips-grid">
+                <div class="tip-item">
+                    <div class="tip-icon">
+                        <i class="fas fa-brush"></i>
+                    </div>
+                    <div class="tip-content">
+                        <h3>Proper Brushing Technique</h3>
+                        <p>Brush your teeth at least twice a day with a soft-bristled brush and fluoride toothpaste. Use gentle circular motions and brush for at least two minutes each time.</p>
+                    </div>
+                </div>
+                <div class="tip-item">
+                    <div class="tip-icon">
+                        <i class="fas fa-flask"></i>
+                    </div>
+                    <div class="tip-content">
+                        <h3>Floss Daily</h3>
+                        <p>Flossing removes plaque and food particles from between teeth and along the gumline where toothbrushes can't reach, preventing cavities and gum disease.</p>
+                    </div>
+                </div>
+                <div class="tip-item">
+                    <div class="tip-icon">
+                        <i class="fas fa-apple-alt"></i>
+                    </div>
+                    <div class="tip-content">
+                        <h3>Healthy Diet Choices</h3>
+                        <p>Limit sugary snacks and drinks that contribute to tooth decay. Choose nutritious foods like fruits, vegetables, dairy products, and lean proteins for strong teeth.</p>
+                    </div>
+                </div>
+                <div class="tip-item">
+                    <div class="tip-icon">
+                        <i class="fas fa-calendar-check"></i>
+                    </div>
+                    <div class="tip-content">
+                        <h3>Regular Dental Visits</h3>
+                        <p>Schedule professional cleanings and exams every six months to detect and prevent dental problems early, before they become more serious and costly to treat.</p>
                     </div>
                 </div>
             </div>
@@ -613,11 +723,11 @@
     </section>
 
     <!-- CTA Section -->
-    <section class="cta" id="get-involved">
+    <section class="cta">
         <div class="container">
-            <h2>Join Our Global Movement</h2>
-            <p>Together, we can create a sustainable future for generations to come. Every action counts, no matter how small.</p>
-            <a href="#" class="btn">Become a Member</a>
+            <h2>Ready for a Healthier Smile?</h2>
+            <p>Book your appointment today and experience the SmileCare difference in professional, compassionate dental care.</p>
+            <a href="#contact" class="btn">Schedule Consultation</a>
         </div>
     </section>
 
@@ -626,8 +736,8 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-column">
-                    <h3>Green Network</h3>
-                    <p>We are dedicated to protecting our planet through collaborative action, education, and sustainable solutions.</p>
+                    <h3>SmileCare Dental</h3>
+                    <p>Providing exceptional dental care with a personal touch. Our mission is to help you achieve and maintain a healthy, beautiful smile.</p>
                     <div class="social-links">
                         <a href="#"><i class="fab fa-facebook-f"></i></a>
                         <a href="#"><i class="fab fa-twitter"></i></a>
@@ -640,30 +750,31 @@
                     <ul class="footer-links">
                         <li><a href="#home">Home</a></li>
                         <li><a href="#about">About Us</a></li>
-                        <li><a href="#initiatives">Initiatives</a></li>
-                        <li><a href="#get-involved">Get Involved</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#tips">Dental Tips</a></li>
                         <li><a href="#contact">Contact</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
-                    <h3>Our Programs</h3>
+                    <h3>Our Services</h3>
                     <ul class="footer-links">
-                        <li><a href="#">Reforestation</a></li>
-                        <li><a href="#">Ocean Cleanup</a></li>
-                        <li><a href="#">Wildlife Protection</a></li>
-                        <li><a href="#">Climate Education</a></li>
-                        <li><a href="#">Sustainable Agriculture</a></li>
+                        <li><a href="#">Preventive Care</a></li>
+                        <li><a href="#">Cosmetic Dentistry</a></li>
+                        <li><a href="#">Restorative Dentistry</a></li>
+                        <li><a href="#">Orthodontics</a></li>
+                        <li><a href="#">Pediatric Dentistry</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
                     <h3>Contact Us</h3>
-                    <p><i class="fas fa-map-marker-alt"></i> Copper Creek Drive, New York</p>
-                    <p><i class="fas fa-phone"></i> +1 (312) 171-0771</p>
-                    <p><i class="fas fa-envelope"></i> support@greennetwork.org</p>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Dental Plaza, New York, NY 10001</p>
+                    <p><i class="fas fa-phone"></i> (212) 555-1234</p>
+                    <p><i class="fas fa-envelope"></i> info@smilecare.com</p>
+                    <p><i class="fas fa-clock"></i> Mon-Fri: 8 AM - 7 PM, Sat: 9 AM - 3 PM</p>
                 </div>
             </div>
             <div class="copyright">
-                <p>&copy; 2025 Green Network. All rights reserved.</p>
+                <p>&copy; 2025 SmileCare Dental Clinic. All rights reserved.</p>
             </div>
         </div>
     </footer>
